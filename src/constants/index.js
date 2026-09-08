@@ -31,8 +31,12 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "work", // This will point to Work Experience
+    title: "Work Experience",
+  },
+  {
+    id: "projects", // This will point to Projects cards
+    title: "Projects",
   },
   {
     id: "contact",
