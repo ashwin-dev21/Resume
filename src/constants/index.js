@@ -218,46 +218,48 @@ const projects = [
     live_demo_link: "https://mern-auth-six-alpha.vercel.app/"
   },
   {
-    name: "Job IT",
+    name: "Profolio",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Profolio — A full-stack portfolio and resume builder that allows users to create, manage, and showcase their professional profiles, projects, skills, and experience through a responsive web application.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "REST API",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Express",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: jobit,
+    source_code_link: "https://github.com/ashwin-dev21/Profolio",
+    live_demo_link: "https://profolio-three-taupe.vercel.app/"
+  },
+  {
+    name: "Prescripto",
+    description:
+      "Prescripto is a doctor appointment booking platform. It allows patients to find doctors and book slots, while providing dashboards for doctors to manage schedules and admins to oversee the system.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "redux",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
+        name: "tailwind",
         color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/ashwin-dev21/Prescripto",
+    live_demo_link: "https://prescripto-omega-puce.vercel.app/"
   },
 ];
 
