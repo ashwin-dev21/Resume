@@ -1,8 +1,9 @@
-import Tilt from 'react-parallax-tilt';
+import React from "react";
+import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github } from "../assets";
+import { github } from "../assets"; // You can also import a web/link icon here if you have one
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -14,6 +15,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  live_demo_link, // 1. Added live_demo_link prop
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -28,14 +30,28 @@ const ProjectCard = ({
         <div className='relative w-full h-[230px]'>
           <img
             src={image}
-            alt='project_image'
+            alt={name}
             className='w-full h-full object-cover rounded-2xl'
           />
 
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+          {/* Icon Container with gap-2 for multiple buttons */}
+          <div className='absolute inset-0 flex justify-end m-3 card-img_hover gap-2'>
+            {/* Live Demo Button */}
+            {live_demo_link && (
+              <div
+                onClick={() => window.open(live_demo_link, "_blank")}
+                className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+                title='Live Demo'
+              >
+                <span className='text-white text-[14px] font-bold'>🌐</span>
+              </div>
+            )}
+
+            {/* GitHub Source Code Button */}
             <div
               onClick={() => window.open(source_code_link, "_blank")}
               className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              title='Source Code'
             >
               <img
                 src={github}
@@ -96,4 +112,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "work");
